@@ -2,7 +2,7 @@ StoriesWithTestCaseCounts
 =========================
 
 ## Overview
-
+This app shows a grid of stories. Columns are ID, Name, Iteration, Owner, and Test Case Count
 
 ## License
 

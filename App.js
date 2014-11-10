@@ -54,30 +54,7 @@ Ext.define('CustomApp', {
                 scope: this
             });
         },
-        
-        
-       /* _loadStories: function(query) {
-            Ext.create("Rally.data.WsapiDataStore", {
-                model: "UserStory",
-                autoLoad: true,
-                filters: query,
-                remoteSort: false,
-                listeners: {
-                    load: function(store, records, success) {
-                         this._updateGrid(store);
-                    },
-                    update: function(store, rec, modified, opts) {
-                        //console.log("calling store update");
-                        this._updateGrid(store);
-                    },
-                    scope: this
-                },
-                fetch: ["Name", "FormattedID", "Iteration", "Feature", "TestCases", 
-                    "Owner"]
-            });
-    
-        },*/
-        
+
         _createGrid: function(myStore) {
         this._myGrid = Ext.create("Rally.ui.grid.Grid", {
             xtype: "rallygrid",
@@ -117,16 +94,11 @@ Ext.define('CustomApp', {
     },
     
     _updateGrid: function(myStore) {
-        //if (this._myGrid === undefined) {
-         //   this._createGrid(myStore);
-        //}
-       // else {
-            this._myGrid.reconfigure(myStore);
-       // }
+        this._myGrid.reconfigure(myStore);
     },
     
     onTimeboxScopeChange: function(newTimeboxScope) {
-        console.log("Timebox Changed called");
+        // console.log("Timebox Changed called");
         var newFilter = (newTimeboxScope.getQueryFilter());
         var store = this.grid.getStore();
         store.clearFilter(true);
