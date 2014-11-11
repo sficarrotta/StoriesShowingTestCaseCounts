@@ -3,7 +3,7 @@ Ext.define('CustomApp', {
     componentCls: 'app',
     items:{ html:'<a href="https://help.rallydev.com/apps/2.0rc3/doc/">App SDK 2.0rc3 Docs</a>'},
         launch: function() {
-            var myFilter;
+            var myFilter = '';
             
             // if there is a timebox on the dashboard/page, make use of it
             var timeboxScope = this.getContext().getTimeboxScope();
